@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.slaviboy.iconscompose.Icon
-import com.slaviboy.iconscompose.IconType
+import com.slaviboy.iconscompose.R
 
 @Composable
 fun ButtonExample() {
@@ -38,11 +38,12 @@ fun ButtonExample() {
             modifier = Modifier
                 .width(15.dp)
                 .height(15.dp),
-            iconType = IconType.HomeRR(),
+            type = R.drawable.fi_rr_search,
+            color = Color.White
         )
         Spacer(Modifier.width(10.dp))
         Text(
-            text = "Home",
+            text = "Search",
             fontSize = 15.sp
         )
     }

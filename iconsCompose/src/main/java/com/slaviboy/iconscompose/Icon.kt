@@ -16,44 +16,37 @@
 */
 package com.slaviboy.iconscompose
 
-import androidx.compose.foundation.Canvas
-import androidx.compose.runtime.*
+import androidx.annotation.DrawableRes
+import androidx.compose.foundation.Image
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.layout.onSizeChanged
-import com.slaviboy.svgpathcompose.SvgPath
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.DefaultAlpha
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 
+/**
+ *
+ */
 @Composable
 fun Icon(
     modifier: Modifier = Modifier,
-    iconType: IconType = IconType.HomeRR(),
-    color: Color = Color.Transparent,
-    brush: Brush = Brush.horizontalGradient(
-        0f to (if (color == Color.Transparent) Color.White else color),
-        1f to (if (color == Color.Transparent) Color.White else color)
-    ),
-    alpha: Float = 1.0f
+    alignment: Alignment = Alignment.Center,
+    contentScale: ContentScale = ContentScale.Fit,
+    color: Color = Color.White,
+    alpha: Float = DefaultAlpha,
+    colorFilter: ColorFilter? = null,
+    @DrawableRes type: Int = R.drawable.fi_rr_home
 ) {
-    var svgPath by remember {
-        mutableStateOf(SvgPath(iconType.pathData, 0f, 0f))
-    }
-    var path by remember {
-        mutableStateOf(Path())
-    }
-
-    Canvas(
-        modifier = modifier
-            .onSizeChanged {
-                svgPath = SvgPath(iconType.pathData, it.width.toFloat(), it.height.toFloat())
-                path = svgPath.generatePath(path)
-            }
-    ) {
-        drawPath(
-            path = path,
-            brush = brush,
-            alpha = alpha
-        )
-    }
+    Image(
+        painter = painterResource(id = type),
+        contentDescription = null,
+        modifier = modifier,
+        alignment = alignment,
+        contentScale = contentScale,
+        alpha = alpha,
+        colorFilter = colorFilter ?: ColorFilter.tint(color = color)
+    )
 }
