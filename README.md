@@ -1,12 +1,13 @@
 # IconsCompose
-Simple Jetpack Compose library for adding 1000+ icons to your composable written in Kotlin
+Simple Jetpack Compose library for adding 5,540+ icons to your composable written in Kotlin
 
-<p align="center">
-    <img src="https://github.com/slaviboy/RepositoryImages/blob/main/icons1.png" alt="Image"   />
-</p>
+<a align="center" href="https://slaviboy.github.io/Compose-Icons-Site/">
+    <img src="https://github.com/slaviboy/RepositoryImages/blob/main/icons1.png" alt="Image" />
+</a>
  
 ## About
-IconsCompose is simple library that with over 1000+ icons, that you can include in your library, you can select the icons from here.
+IconsCompose is simple library that with over 5,540+ free icons, that you can include in your Android app.   
+_**[You can select the icons from here.](https://slaviboy.github.io/Compose-Icons-Site)**_
 
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
@@ -31,7 +32,7 @@ dependencies {
 ```
  
 ### How to use
-To add icons to your composable, simply add the [Icon](https://github.com/slaviboy/IconsCompose/blob/master/iconsCompose/src/main/java/com/slaviboy/iconscompose/Icon.kt) composable, where you can set the modifier and spesify your icon size
+To add icons to your Jetpack Compose app, simply add the [Icon](https://github.com/slaviboy/IconsCompose/blob/master/iconsCompose/src/main/java/com/slaviboy/iconscompose/Icon.kt) Composable, where you can set the modifier, specify your icon size and use all the properties that you normaly use with the regular Image composable.
 ```kotlin
 
 class MainActivity : ComponentActivity() {
@@ -41,12 +42,12 @@ class MainActivity : ComponentActivity() {
         
             // add Icon inside your composable
             Icon(
-              modifier = Modifier
-                  .width(15.dp)
-                  .height(15.dp),
-              iconType = IconType.HomeRR(),
-              color = Color.Red
-           )
+                modifier = Modifier
+                   .width(15.dp)
+                   .height(15.dp),
+                type = R.drawable.fi_rr_search,
+                color = Color.White
+            )
         }
     }
 }
