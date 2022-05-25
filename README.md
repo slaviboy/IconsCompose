@@ -35,6 +35,9 @@ dependencies {
 To add icons to your Jetpack Compose app, simply add the [Icon](https://github.com/slaviboy/IconsCompose/blob/master/iconsCompose/src/main/java/com/slaviboy/iconscompose/Icon.kt) Composable, where you can set the modifier, specify your icon size and use all the properties that you normaly use with the regular Image composable.
 ```kotlin
 
+import com.slaviboy.iconscompose.Icon
+import com.slaviboy.iconscompose.R
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
