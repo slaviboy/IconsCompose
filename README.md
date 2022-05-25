@@ -36,14 +36,6 @@ To add icons to your Jetpack Compose app, simply add the [Icon](https://github.c
 
 ```kotlin
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import com.slaviboy.iconscompose.Icon
 import com.slaviboy.iconscompose.R
 
@@ -57,7 +49,7 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier
                     .width(15.dp)
                     .height(15.dp),
-                type = R.drawable.fi_brands_trello,
+                type = R.drawable.fi_br_settings,
                 color = Color.Red
             )
         }
