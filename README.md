@@ -33,8 +33,17 @@ dependencies {
  
 ### How to use
 To add icons to your Jetpack Compose app, simply add the [Icon](https://github.com/slaviboy/IconsCompose/blob/master/iconsCompose/src/main/java/com/slaviboy/iconscompose/Icon.kt) Composable, where you can set the modifier, specify your icon size and use all the properties that you normaly use with the regular Image composable.
+
 ```kotlin
 
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import com.slaviboy.iconscompose.Icon
 import com.slaviboy.iconscompose.R
 
@@ -42,19 +51,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-        
-            // add Icon inside your composable
+
+            // add Icon inside your Composable
             Icon(
                 modifier = Modifier
-                   .width(15.dp)
-                   .height(15.dp),
-                type = R.drawable.fi_rr_search,
-                color = Color.White
+                    .width(15.dp)
+                    .height(15.dp),
+                type = R.drawable.fi_brands_trello,
+                color = Color.Red
             )
         }
     }
 }
-
 ```
  
 _**To check the available example on creating custom Composable check the classes in the [composable](https://github.com/slaviboy/IconsCompose/tree/master/app/src/main/java/com/slaviboy/iconscomposeexample/composables) package.**_
