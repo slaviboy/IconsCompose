@@ -2,8 +2,9 @@
 Simple Jetpack Compose library for adding 5,540+ icons to your composable written in Kotlin
 
 <a align="center" href="https://slaviboy.github.io/Compose-Icons-Site/">
-    <img src="https://github.com/slaviboy/RepositoryImages/blob/main/icons1.png" alt="Image" />
+    <img src="https://github.com/slaviboy/RepositoryImages/blob/main/fun/icons_compose_home.png" alt="Image" />
 </a>
+
  
 ## About
 IconsCompose is simple library that with over 5,540+ free icons, that you can include in your Android app.   
